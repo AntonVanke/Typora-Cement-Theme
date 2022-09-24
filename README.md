@@ -1,6 +1,8 @@
 # Typora-Cement-Theme
 Typora theme: Cement.
 
+<img src="./images/cement.png" alt="cement" style="zoom: 50%;" />
+
 ---
 
 ### 如何使用
