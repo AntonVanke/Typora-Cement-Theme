@@ -31,6 +31,10 @@ Typora theme: Cement.
 
 ![](images/img_16.png)
 
+### 导出预览
+
+<img src="images/img_17.png" alt="img_17" style="zoom:50%;" />
+
 ### LICENSE
 
 > MIT License
