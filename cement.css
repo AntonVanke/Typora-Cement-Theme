@@ -135,7 +135,6 @@ SOFTWARE.
     }
 }
 
-html,
 body {
     background: var(--bg-color);
     font: 100%/1.65 var(--font-family-base);
@@ -1061,6 +1060,10 @@ header {
 
 .typora-export .outline-item-wrapper:not(.outline-item-active) {
     opacity: .6;
+}
+
+body.typora-export {
+    max-width: none !important;
 }
 
 /*防止超链接点不到*/
