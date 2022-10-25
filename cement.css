@@ -139,7 +139,7 @@ html,
 body {
     background: var(--bg-color);
     font: 100%/1.65 var(--font-family-base);
-    /*max-width: 950px;*/
+    max-width: 950px;
 }
 
 /* 内容沉底 */
@@ -165,12 +165,13 @@ content {
 
 #write {
     border-radius: var(--hover-radius);
+    margin: 16px 16px 10% 16px;
     background: var(--write-bg-color);
     transition-duration: 0.3s;
     transform: perspective(1px) translateZ(0);
     transition-property: padding;
-    max-width: 950px;
-    margin: 16px auto 10%;
+    /*max-width: 950px;*/
+    /*margin: 16px auto 10%;*/
 }
 
 /* 写作区域宽度自适应 */
@@ -657,9 +658,10 @@ blockquote:hover {
     margin-right: 30px;
 }
 
-.md-notification-container #md-notification div {
-    display: block !important;
-}
+/*TODO:导出时的动画*/
+/*.md-notification-container #md-notification div {*/
+/*    display: block !important;*/
+/*}*/
 
 /* 模态框 */
 #common-dialog.modal {
@@ -704,6 +706,7 @@ blockquote:hover {
     transform: perspective(1px) translateZ(0);
     transition-duration: 0.5s;
     transition-property: border-radius, padding, box-shadow;
+    transition-timing-function: ease-in-out;
     /* box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%); */
 }
 
@@ -1063,4 +1066,29 @@ header {
 /*防止超链接点不到*/
 .typora-export .outline-item-wrapper .outline-label {
     width: 100%;
+}
+
+/*
+Mac 上的一些细节优化
+*/
+/*Macos 的侧边栏边框*/
+.mac-os-11 .sidebar-tabs {
+    border-bottom: none !important;
+}
+
+/*侧边栏搜索框*/
+.mac-os-11 #file-library-search-input {
+    padding: 5px 10px;
+}
+
+.mac-os-11 #file-library-search-input:focus {
+    padding: 10px 10px;
+}
+
+.mac-os-11 #ty-sidebar-search-back-btn {
+    padding-top: 3px;
+}
+
+.mac-os-11 #file-library-search-input:focus ~ #ty-sidebar-search-back-btn {
+    padding-top: 8px;
 }
