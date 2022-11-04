@@ -74,7 +74,7 @@ SOFTWARE.
     /* 侧边栏宽度 */
     --sidebar-width: 256px;
     /*代码块背景*/
-    --code-block-bg-color: #f8f9fa;
+    --code-block-bg-color: #f6f7f8;
     /*latex背景*/
     --rawblock-edit-panel-bd: var(--code-block-bg-color);
 
@@ -356,11 +356,21 @@ content .dropdown-menu {
 
 /* 表格编辑条 */
 .ty-table-edit {
+    /*overflow: hidden;*/
+    /*width: 30px !important;*/
+    /*height: 30px;*/
     background: var(--color-white);
     border-radius: 15px;
+    /*padding-left: 0;*/
     border: 1px solid var(--table-border-color);
+    /*transition: width .5s ease-in-out, overflow 1s ease-in;*/
     box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);
 }
+
+/*.ty-table-edit:hover {*/
+/*    width: 40% !important;*/
+/*    overflow: visible;*/
+/*}*/
 
 /* 表格编辑条按钮 */
 .ty-table-edit button {
@@ -705,10 +715,11 @@ blockquote:hover {
     background-color: var(--code-block-bg-color);
     border-radius: var(--radius);
     transform: perspective(1px) translateZ(0);
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-property: border-radius, padding, box-shadow;
     transition-timing-function: ease-in-out;
-    /* box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%); */
+    /*box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);*/
+    /*box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .2);*/
 }
 
 /* .md-fences:hover::before {
