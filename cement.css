@@ -74,7 +74,7 @@ SOFTWARE.
     /* 侧边栏宽度 */
     --sidebar-width: 256px;
     /*代码块背景*/
-    --code-block-bg-color: #e6eddf;
+    --code-block-bg-color: #f8f9fa;
     /*latex背景*/
     --rawblock-edit-panel-bd: var(--code-block-bg-color);
 
@@ -104,8 +104,10 @@ SOFTWARE.
     /* 引用背景颜色 */
     --blockquote-bg-color: var(--color-primary-container);
 
+    /* 行内代码颜色 */
+    --inline-code-color: #008f83;
     /*表格首行背景颜色*/
-    --table-first-bg-color: #f0f4fa;
+    --table-first-bg-color: #f8f9fa;
     /*表格其他行背景颜色*/
     /* --table-other-bg-color: var(--color-tertiary-container); */
 
@@ -409,7 +411,7 @@ mark span {
 #write :not(pre) > code {
     font-family: var(--font-family-monospace);
     font-weight: 300;
-    color: var(--color-secondary);
+    color: var(--inline-code-color);
     padding: 0 4px;
 }
 
