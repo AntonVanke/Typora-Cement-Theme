@@ -1,0 +1,312 @@
+@import "cement/cement.css";
+
+:root {
+    /*
+    Color
+    Material 3 标准颜色
+    */
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-primary: #6750A4;
+    --color-on-primary: #FFFFFF;
+    --color-primary-container: #EADDFF;
+    --color-on-primary-container: #21005D;
+
+    --color-secondary: #625B71;
+    --color-on-secondary: #FFFFFF;
+    --color-secondary-container: #EADDFF;
+    --color-on-secondary-container: #1D192B;
+
+    --color-tertiary: #7D5260;
+    --color-on-tertiary: #FFFFFF;
+    --color-tertiary-container: #FFD8E4;
+    --color-on-tertiary-container: #31111D;
+
+    --color-error: #B3261E;
+    --color-on-error: #FFFFFF;
+    --color-error-container: #F9DEDC;
+    --color-on-error-container: #410E0B;
+
+    /*
+    系统变量
+    Typora base.css/base-control.css/windows.css 所带的变量
+    */
+    /* 背景颜色 */
+    --bg-color: #202124;
+    /* 文字颜色 */
+    --text-color: #f5f5f5;
+    /* 选择的文字背景颜色 */
+    --select-text-bg-color: #B5D6FC;
+    /* 选择的文字颜色 */
+    --select-text-font-color: auto;
+    /* 侧边栏颜色 */
+    --side-bar-bg-color: var(--bg-color);
+    /* 菜单边框 */
+    --window-border: 1px solid #e9e9e9;
+    /* 侧边栏活跃文件背景颜色 */
+    --active-file-bg-color: #eee;
+    /* 侧边栏活跃文件文字颜色 */
+    --active-file-text-color: inherit;
+    /* 侧边栏活跃文件边框颜色 */
+    --active-file-border-color: #777;
+    /* 侧边栏宽度 */
+    --sidebar-width: 256px;
+    /*代码块背景*/
+    --code-block-bg-color: #272822;
+    /*latex背景*/
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+
+    /*
+    主题变量
+    主题所设置的变量
+    */
+    /* 基础字体 */
+    --font-family-base: "思源黑体 CN", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /*等宽代码字体*/
+    --font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* 编辑区背景颜色 */
+    --write-bg-color: rgba(51, 51, 51, 0.8);
+    /* 圆角 */
+    --radius: 5px;
+    /* 圆角 hover */
+    --hover-radius: 24px;
+    /* 标题颜色 */
+    --title-color: var(--color-white);
+    /* 链接颜色 */
+    --link-color: #0e82c2;
+    /* 标题前的指示标志 */
+    --md-heading-before-color: var(--link-color);
+    /*右键菜单*/
+    --dropdown-menu-color: var(--color-black);
+    /*菜单按钮*/
+    --long-btn-color: #202020;
+    --long-btn-normal: 10px 10px 20px #1b1b1b, -10px -10px 20px #252525;
+    --long-btn-hover: 5px 5px 10px #1b1b1b, -5px -5px 10px #252525;
+    --long-btn-hover-bg: linear-gradient(145deg, #1d1d1d, #222222);
+    --recent-file-panel-action-btn: 4px 4px 9px #1b1b1b, -4px -4px 9px #252525;
+    --recent-file-panel-action-btn-hover: 4px 4px 9px #1b1b1b, -4px -4px 9px #252525;
+    --recent-file-panel-action-btn-hover-bg: linear-gradient(145deg, #1d1d1d, #222222);
+    --recent-file-panel-action-btn-active-bg: inset 4px 4px 9px #1b1b1b, inset -4px -4px 9px #252525;
+
+    /*高亮背景颜色*/
+    --mark-bg-color: var(--color-tertiary);
+    /*高亮文字颜色*/
+    --mark-text-color: var(--color-white);
+    /* 引用字体颜色 */
+    --blockquote-font-color: var(--color-white);
+    /* 引用背景颜色 */
+    --blockquote-bg-color: #9c8fb0;
+
+
+    /* 行内代码颜色 */
+    --inline-code-color: #03d2c1;
+    /*表格首行背景颜色*/
+    --table-first-bg-color: #1a1a16;
+    /*表格其他行背景颜色*/
+    /* --table-other-bg-color: var(--color-tertiary-container); */
+
+    /* 表格边框颜色  */
+    --table-border-color: #e1e3e1;
+
+    /* YAML 背景颜色 */
+    --meta-block-bg-color: var(--color-tertiary-container);
+    /* YAML 文字颜色 */
+    --meta-block-font-color: var(--color-on-tertiary-container);
+
+    /* active 背景 */
+    --sidebar-active-bg-color: rgba(255, 255, 255, .3);
+    /* --sidebar-active-bg-color: #fce8e6; */
+    /* hover 背景 */
+    --sidebar-hover-bg-color: rgba(255, 255, 255, 0.4);
+
+    /*搜索栏 focus 颜色*/
+    --file-library-search-input-focus-color: var(--color-black);
+    /*最近文件单数背景*/
+    --recent-file-panel-n-color: #272727;
+}
+
+/*
+代码块
+*/
+.md-fences {
+    background-color: var(--code-block-bg-color);
+    border-radius: var(--radius);
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: border-radius, padding, box-shadow;
+    transition-timing-function: ease-in-out;
+    /*box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);*/
+    /*box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .2);*/
+}
+
+/* .md-fences:hover::before {
+    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDU0IDE0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSI+CiAgICAgICAgPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IiNGRjVGNTYiIHN0cm9rZT0iI0UwNDQzRSIgc3Ryb2tlLXdpZHRoPSIuNSI+PC9jaXJjbGU+CiAgICAgICAgPGNpcmNsZSBjeD0iMjYiIGN5PSI2IiByPSI2IiBmaWxsPSIjRkZCRDJFIiBzdHJva2U9IiNERUExMjMiIHN0cm9rZS13aWR0aD0iLjUiPjwvY2lyY2xlPgogICAgICAgIDxjaXJjbGUgY3g9IjQ2IiBjeT0iNiIgcj0iNiIgZmlsbD0iIzI3QzkzRiIgc3Ryb2tlPSIjMUFBQjI5IiBzdHJva2Utd2lkdGg9Ii41Ij48L2NpcmNsZT4KICAgIDwvZz4KPC9zdmc+');
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 5;
+} */
+
+/* .md-fences:hover::before {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8Y2lyY2xlIGlkPSJzdmdfMiIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZT0iI0UwNDQzRSIgZmlsbD0iI0ZGNUY1NiIgcj0iNiIgY3k9IjciIGN4PSI2LjgwNzY5MyIvPgogICAgPGNpcmNsZSBpZD0ic3ZnXzMiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2U9IiNERUExMjMiIGZpbGw9IiNGRkJEMkUiIHI9IjYiIGN5PSI3IiBjeD0iMjYuODA3NjkzIi8+CiAgICA8Y2lyY2xlIGlkPSJzdmdfNCIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZT0iIzFBQUIyOSIgZmlsbD0iIzI3QzkzRiIgcj0iNiIgY3k9IjciIGN4PSI0Ni44MDc2OTMiLz4KICAgIDxsaW5lIHRyYW5zZm9ybT0icm90YXRlKDQ1IDYuNzM4NTUxNjE2NjY4NzA2LDcuMDg3MTQwNTYwMTUwMTQ2KSAiIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiCiAgICAgICAgICBzdHJva2UtbGluZWpvaW49Im51bGwiIGlkPSJzdmdfMTMiIHkyPSI3LjA4NzE0MSIgeDI9IjExLjU3MzIyMiIgeTE9IjcuMDg3MTQxIiB4MT0iMS45MDM4ODIiCiAgICAgICAgICBmaWxsLW9wYWNpdHk9Im51bGwiIHN0cm9rZS1vcGFjaXR5PSJudWxsIiBmaWxsPSJub25lIi8+CiAgICA8bGluZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgNi43Mzg1NTE2MTY2Njg3MDIsNy4wODcxNDA1NjAxNTAxNDYpICIgc3Ryb2tlPSIjNTU1IiBzdHJva2UtbGluZWNhcD0ibnVsbCIKICAgICAgICAgIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgaWQ9InN2Z18xNSIgeTI9IjcuMDg3MTQxIiB4Mj0iMTEuNTczMjIyIiB5MT0iNy4wODcxNDEiIHgxPSIxLjkwMzg4MiIKICAgICAgICAgIGZpbGwtb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiIGZpbGw9Im5vbmUiLz4KICAgIDxsaW5lIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgaWQ9InN2Z18xNiIgeTI9IjcuMDg3MTQxIiB4Mj0iMzEuNzY1NTAzIgogICAgICAgICAgeTE9IjcuMDg3MTQxIiB4MT0iMjIuMDk2MTYyIiBmaWxsLW9wYWNpdHk9Im51bGwiIHN0cm9rZS1vcGFjaXR5PSJudWxsIiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCB0cmFuc2Zvcm09InJvdGF0ZSg5MCA0NS42Nzc3Njg3MDcyNzUzOSw2LjMwMTg5ODQ3OTQ2MTY3NCkgIiBpZD0ic3ZnXzE4IgogICAgICAgICAgZD0ibTQ1LjI5MzE1MSw2LjY4NjUxNGwwLC0wLjc2OTIzMWwwLjc2OTIzMSwwLjc2OTIzMWwtMC43NjkyMzEsMHoiIGZpbGwtb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiCiAgICAgICAgICBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iIzU1NSIgZmlsbD0ibm9uZSIvPgogICAgPHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDQ3Ljk4NTQ1ODM3NDAyMzQ0NSw4LjgwMTg5ODAwMjYyNDUxKSAiIGlkPSJzdmdfMTkiCiAgICAgICAgICBkPSJtNDcuNjAwODQyLDkuMTg2NTE0bDAsLTAuNzY5MjNsMC43NjkyMywwLjc2OTIzbC0wLjc2OTIzLDB6IiBmaWxsLW9wYWNpdHk9Im51bGwiIHN0cm9rZS1vcGFjaXR5PSJudWxsIgogICAgICAgICAgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiM1NTUiIGZpbGw9Im5vbmUiLz4KPC9zdmc+");
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 5;
+} */
+.md-fences:hover,
+.auto-suggest-for-fences:hover {
+    border-radius: var(--hover-radius);
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    /* box-shadow: 0 20px 40px rgb(0 0 0 / 55%); */
+}
+
+.CodeMirror.cm-s-inner {
+    border-radius: 15px;
+    padding: 15px 10px 10px 10px;
+}
+
+.md-fences:hover::after {
+    content: attr(lang);
+    transition-duration: 200ms;
+    color: var(--color-tertiary-container);
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
+    font-size: .8rem;
+    font-style: italic;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 999;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid var(--text-color) !important;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    color: #404b53;
+    background-color: transparent;
+    border-right: 0
+}
+
+.CodeMirror {
+    background: #272822;
+    color: #f8f8f2
+}
+
+.cm-s-inner .CodeMirror-line::selection, .cm-s-inner .CodeMirror-line > span::selection, .cm-s-inner .CodeMirror-line > span > span::selection {
+    background: rgba(73, 72, 62, .99)
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection, .cm-s-inner .CodeMirror-line > span::-moz-selection, .cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+    background: rgba(73, 72, 62, .99)
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    background: #272822;
+    border-right: 0
+}
+
+.cm-s-inner .CodeMirror-guttermarker {
+    color: #fff
+}
+
+.cm-s-inner .CodeMirror-guttermarker-subtle {
+    color: #d0d0d0
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #d0d0d0
+}
+
+.cm-s-inner .CodeMirror-cursor {
+    border-left: 1px solid #f8f8f0
+}
+
+.cm-s-inner span.cm-comment {
+    color: #75715e
+}
+
+.cm-s-inner span.cm-atom {
+    color: #ae81ff
+}
+
+.cm-s-inner span.cm-number {
+    color: #ae81ff
+}
+
+.cm-s-inner span.cm-comment.cm-attribute {
+    color: #97b757
+}
+
+.cm-s-inner span.cm-comment.cm-def {
+    color: #bc9262
+}
+
+.cm-s-inner span.cm-comment.cm-tag {
+    color: #bc6283
+}
+
+.cm-s-inner span.cm-comment.cm-type {
+    color: #5998a6
+}
+
+.cm-s-inner span.cm-attribute, .cm-s-inner span.cm-property {
+    color: #a6e22e
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #f92672
+}
+
+.cm-s-inner span.cm-builtin {
+    color: #66d9ef
+}
+
+.cm-s-inner span.cm-string {
+    color: #e6db74
+}
+
+.cm-s-inner span.cm-variable {
+    color: #f8f8f2
+}
+
+.cm-s-inner span.cm-variable-2 {
+    color: #9effff
+}
+
+.cm-s-inner span.cm-type, .cm-s-inner span.cm-variable-3 {
+    color: #66d9ef
+}
+
+.cm-s-inner span.cm-def {
+    color: #fd971f
+}
+
+.cm-s-inner span.cm-bracket {
+    color: #f8f8f2
+}
+
+.cm-s-inner span.cm-tag {
+    color: #f92672
+}
+
+.cm-s-inner span.cm-header {
+    color: #ae81ff
+}
+
+.cm-s-inner span.cm-link {
+    color: #ae81ff
+}
+
+.cm-s-inner span.cm-error {
+    background: #f92672;
+    color: #f8f8f0
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: #fff !important
+}
