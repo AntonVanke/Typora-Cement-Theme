@@ -78,7 +78,7 @@
     /* 标题前的指示标志 */
     --md-heading-before-color: var(--link-color);
     /*右键菜单*/
-    --dropdown-menu-color: var(--color-black);
+    --dropdown-menu-color: var(--color-white);
     /*菜单按钮*/
     --long-btn-color: #e6eef4;
     --long-btn-normal: 10px 10px 20px #c4cacf, -10px -10px 20px #ffffff;
@@ -122,7 +122,7 @@
     /*搜索栏 focus 颜色*/
     --file-library-search-input-focus-color: var(--color-white);
     /*最近文件单数背景*/
-    --recent-file-panel-n-color: #f7f7f7;
+    --recent-file-panel-n-color: var(--color-black);
 }
 
 /*

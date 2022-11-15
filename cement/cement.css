@@ -47,7 +47,7 @@ LICENSE: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 
 body {
     background: var(--bg-color);
-    font: 105%/1.65 var(--font-family-base);
+    font: 100%/1.65 var(--font-family-base);
     max-width: 950px;
 }
 
@@ -452,7 +452,8 @@ blockquote:hover {
     padding-top: 5px;
     padding-bottom: 5px;
     border-left: 28px solid transparent;
-    border-right: 28px solid transparent;
+    padding-right: 28px;
+    /*border-right: 28px solid transparent;*/
     transition: border-radius, width .15s cubic-bezier(0.4, 0, 0.2, 1), margin .15s cubic-bezier(0.4, 0, 0.2, 1), width .15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

@@ -11,11 +11,11 @@ Typora theme: Cement.
 
 2. 打开`Typora`->`文件`->`偏好设置`->`外观`->`打开主题文件夹`
 
-3. 复制`cement.css`文件、`cement`文件夹到主题文件夹下
+3. 复制`cement.css`文件、`cement-dark`文件、`cement`文件夹到主题文件夹下
 
 4. 重启`Typora`
 
-5. 打开`Typora`->`主题`->选择`Cement`
+5. 打开`Typora`->`主题`->选择`Cement`（浅色主题）或者`Cement Dark`（深色主题）
 
 详情请查看[Install Theme (typora.io)](https://theme.typora.io/doc/Install-Theme/)
 
