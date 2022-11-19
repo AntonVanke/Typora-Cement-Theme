@@ -37,7 +37,7 @@
     /* 文字颜色 */
     --text-color: #f5f5f5;
     /* 选择的文字背景颜色 */
-    --select-text-bg-color: #B5D6FC;
+    --select-text-bg-color: #3d444d;
     /* 选择的文字颜色 */
     --select-text-font-color: auto;
     /* 侧边栏颜色 */
@@ -309,4 +309,27 @@
 .cm-s-inner .CodeMirror-matchingbracket {
     text-decoration: underline;
     color: #fff !important
+}
+
+/*-------
+绘图
+-------*/
+svg .edgePath .path {
+    stroke: var(--color-tertiary-container) !important;
+}
+
+svg marker[id*="arrowhead"] path {
+    stroke: var(--color-tertiary-container) !important;
+    fill: var(--color-tertiary-container) !important;
+}
+
+svg line[class*="messageLine"] {
+    stroke: #999 !important;
+}
+
+
+svg text.messageText,
+svg text.loopText,
+svg text.loopText tspan {
+    fill: #fff !important;
 }
