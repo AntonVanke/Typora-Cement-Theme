@@ -110,9 +110,9 @@
     --table-border-color: #e1e3e1;
 
     /* YAML 背景颜色 */
-    --meta-block-bg-color: var(--color-tertiary-container);
+    --meta-block-bg-color: #50383a;
     /* YAML 文字颜色 */
-    --meta-block-font-color: var(--color-on-tertiary-container);
+    --meta-block-font-color: var(--color-white);
 
     /* active 背景 */
     --sidebar-active-bg-color: rgba(255, 255, 255, .3);
@@ -123,7 +123,8 @@
     /*搜索栏 focus 颜色*/
     --file-library-search-input-focus-color: var(--color-black);
     /*最近文件单数背景*/
-    --recent-file-panel-n-color: #272727;
+    --recent-file-panel-n-bg-color: rgb(66, 66, 66);
+    --recent-file-panel-n-color: #e1e1e1;
 }
 
 /*

@@ -788,6 +788,7 @@ header {
     font-weight: 400;
 }
 #recent-file-panel tbody tr:nth-child(2n-1){
+    background-color: var(--recent-file-panel-n-bg-color);
     color: var(--recent-file-panel-n-color);
 }
 

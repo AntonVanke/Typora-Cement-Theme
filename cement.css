@@ -122,6 +122,7 @@
     /*搜索栏 focus 颜色*/
     --file-library-search-input-focus-color: var(--color-white);
     /*最近文件单数背景*/
+    --recent-file-panel-n-bg-color: #c0c0c0;
     --recent-file-panel-n-color: var(--color-black);
 }
 
