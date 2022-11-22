@@ -18,7 +18,7 @@
     --color-secondary-container: #EADDFF;
     --color-on-secondary-container: #1D192B;
 
-    --color-tertiary: #7D5260;
+    --color-tertiary: #0e82c2;
     --color-on-tertiary: #FFFFFF;
     --color-tertiary-container: #FFD8E4;
     --color-on-tertiary-container: #31111D;
@@ -102,6 +102,8 @@
     --inline-code-color: #008f83;
     /*表格首行背景颜色*/
     --table-first-bg-color: #f8f9fa;
+    /*表格编辑条颜色*/
+    --ty-table-edit-bg-color: var(--color-white);
     /*表格其他行背景颜色*/
     /* --table-other-bg-color: var(--color-tertiary-container); */
 

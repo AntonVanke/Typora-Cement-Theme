@@ -103,6 +103,8 @@
     --inline-code-color: #03d2c1;
     /*表格首行背景颜色*/
     --table-first-bg-color: #1a1a16;
+    /*表格编辑条颜色*/
+    --ty-table-edit-bg-color: #999999;
     /*表格其他行背景颜色*/
     /* --table-other-bg-color: var(--color-tertiary-container); */
 

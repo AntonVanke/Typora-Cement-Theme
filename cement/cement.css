@@ -267,7 +267,7 @@ content .dropdown-menu {
     /*overflow: hidden;*/
     /*width: 30px !important;*/
     /*height: 30px;*/
-    background: var(--color-white);
+    background: var(--ty-table-edit-bg-color);
     border-radius: 15px;
     /*padding-left: 0;*/
     border: 1px solid var(--table-border-color);
@@ -339,6 +339,14 @@ mark span {
 }
 
 /*行内公式预览*/
+.md-inline-math {
+    margin-left: .3rem;
+    margin-right: .3rem;
+}
+
+.md-inline-math .md-meta {
+    color: #0e82c2;
+}
 
 #math-inline-preview .md-arrow {
     opacity: .3;
@@ -787,7 +795,8 @@ header {
     color: var(--color-black);
     font-weight: 400;
 }
-#recent-file-panel tbody tr:nth-child(2n-1){
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
     background-color: var(--recent-file-panel-n-bg-color);
     color: var(--recent-file-panel-n-color);
 }
