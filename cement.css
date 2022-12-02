@@ -126,6 +126,11 @@
     /*最近文件单数背景*/
     --recent-file-panel-n-bg-color: #c0c0c0;
     --recent-file-panel-n-color: var(--color-black);
+
+    /*操作按钮*/
+    --titlebar-bg-color: #EDEDED;
+    --titlebar-top-bg-color: var(--color-primary-container);
+
 }
 
 /*

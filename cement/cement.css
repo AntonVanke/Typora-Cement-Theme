@@ -864,3 +864,24 @@ Mac 上的一些细节优化
 .mac-os-11 #file-library-search-input:focus ~ #ty-sidebar-search-back-btn {
     padding-top: 8px;
 }
+
+/*一个偶然发现的置顶功能*/
+.always-on-top #w-unpin {
+    background: var(--titlebar-top-bg-color);
+}
+
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--titlebar-bg-color);
+}
+
+/*源码模式按钮背景颜色*/
+.typora-sourceview-on #toggle-sourceview-btn {
+    background: var(--active-file-bg-color);
+    opacity: .2;
+    transition: opacity, padding 200ms ease-in-out;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn:hover {
+    background: var(--active-file-bg-color);
+    opacity: .5;
+}
