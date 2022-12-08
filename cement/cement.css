@@ -223,6 +223,15 @@ content {
     border-bottom-right-radius: var(--hover-radius);
 }
 
+/*一个投机取巧的方法，不过我觉得还挺好看*/
+#write table:not(.md-grid-board) thead tr:first-child th:first-child {
+    border-bottom-left-radius: var(--hover-radius) !important;
+}
+
+#write table:not(.md-grid-board) thead tr:first-child th:last-child {
+    border-bottom-right-radius: var(--hover-radius) !important;
+}
+
 /*
 #write table:not(.md-grid-board):hover {
     border-radius: var(--hover-radius);
